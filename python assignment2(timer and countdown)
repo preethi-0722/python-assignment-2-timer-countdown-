@@ -1,0 +1,30 @@
+import time
+
+def countdown(seconds):
+    while seconds > 0:
+        print(f"Time left: {seconds} seconds")
+        time.sleep(1)
+        seconds -= 1
+    print("Time's up!")
+
+def timer(seconds):
+    print(f"Timer set for {seconds} seconds.")
+    time.sleep(seconds)
+    print("Time's up!")
+
+def main():
+    print("1. Countdown Clock")
+    print("2. Timer")
+    choice = input("Enter your choice (1 or 2): ")
+
+    if choice == "1":
+        seconds = int(input("Enter the countdown time in seconds: "))
+        countdown(seconds)
+    elif choice == "2":
+        seconds = int(input("Enter the timer duration in seconds: "))
+        timer(seconds)
+    else:
+        print("Invalid choice. Please choose 1 or 2.")
+
+if _name_ == "_main_":
+    main()
